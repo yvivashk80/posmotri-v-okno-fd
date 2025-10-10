@@ -82,7 +82,6 @@ ol {
 .content {
   column-gap: 30px;
   width: 1140px;
-  height: 534px;
 }
 
 .result__video-container {
@@ -215,11 +214,15 @@ ol {
   color: #fff;
 }
 
-.button:hover {
+/* Здесь у меня есть сомнения, оставить два селектора или сделать один общий */
+.button:hover,
+.content__card-link:hover {
   text-decoration: underline;
 }
 
-.button:active {
+/* Здесь у меня есть сомнения, оставить два селектора или сделать один общий */
+.button:active,
+.content__card-link:active {
   background-color: #545050;
   text-decoration: none;
   outline: none;
@@ -302,6 +305,7 @@ ol {
 }
 
 .content__video-card-description-container {
+  padding-right: 5px; /* добавил данное св-во чтобы текст при переполнении не прижимался к картинке */
   flex-grow: 1;
   flex-basis: 0;
   overflow: hidden;
